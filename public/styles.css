@@ -1,0 +1,143 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Background */
+body {
+  background: linear-gradient(135deg, #000000, #1a0000, #330000, #660000);
+  min-height: 100vh;
+  color: #fff;
+}
+
+/* Navbar */
+nav {
+  background: linear-gradient(90deg, #ff0000, #990000);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+nav h2 {
+  color: #fff;
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 15px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #ffcccc;
+}
+
+/* Container */
+.container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  background: rgba(20, 0, 0, 0.8);
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255,0,0,0.4);
+}
+
+/* Headings */
+h1, h2 {
+  margin-bottom: 15px;
+  color: #ff4d4d;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input[type="text"],
+textarea {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Buttons */
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+button[type="submit"] {
+  background: linear-gradient(90deg, #ff0000, #990000);
+  color: white;
+}
+
+.btn-edit {
+  background: #ff6600;
+  color: white;
+  margin-right: 10px;
+}
+
+.btn-edit:hover {
+  background: #ff8533;
+}
+
+.btn-delete {
+  background: #cc0000;
+  color: white;
+}
+
+.btn-delete:hover {
+  background: #ff1a1a;
+}
+
+/* Posts */
+.post {
+  background: rgba(0,0,0,0.7);
+  padding: 15px;
+  margin-top: 20px;
+  border-left: 6px solid #ff0000;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.post:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 12px rgba(255,0,0,0.5);
+}
+
+.post h2 {
+  color: #ff3333;
+  margin-bottom: 10px;
+}
+
+.post p {
+  line-height: 1.5;
+  color: #ddd;
+}

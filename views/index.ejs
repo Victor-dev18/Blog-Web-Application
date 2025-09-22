@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Blog</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <h2>📝 My Blog</h2>
+    <div>
+      <a href="/">Home</a>
+      <a href="#new-post">New Post</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- New Post Form -->
+    <h1 id="new-post">➕ Create a New Post</h1>
+    <form action="/new" method="POST">
+      <input type="text" name="title" placeholder="Enter Post Title" required>
+      <textarea name="content" placeholder="Write your blog content here..." required></textarea>
+      <button type="submit">Add Post</button>
+    </form>
+
+    <hr>
+
+    <!-- Display All Posts -->
+    <% if (posts.length === 0) { %>
+      <p style="text-align: center; color: #aaa;">No posts yet. Start writing your first one!</p>
+    <% } else { %>
+      <% posts.forEach(post => { %>
+        <div class="post">
+          <h2><%= post.title %></h2>
+          <p><%= post.content %></p>
+          <a href="/edit/<%= post.id %>">
+            <button class="btn-edit">✏️ Edit</button>
+          </a>
+          <a href="/delete/<%= post.id %>">
+            <button class="btn-delete">🗑 Delete</button>
+          </a>
+        </div>
+      <% }) %>
+    <% } %>
+  </div>
+</body>
+</html>
