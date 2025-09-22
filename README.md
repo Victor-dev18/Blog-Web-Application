@@ -27,26 +27,10 @@ This version does **not use a database** — posts exist only while the server i
 
 ---
 
-## 📂 Project Structure
-blog-app/
-│
-├── public/
-│ └── styles.css # CSS styling
-│
-├── views/
-│ ├── index.ejs # Home page (view, add posts)
-│ ├── edit.ejs # Edit post page
-│
-├── index.js # Express server
-├── package.json # Dependencies & scripts
-└── README.md # Project documentation
-
-
----
 
 ## ⚡ Getting Started
 
-### 1. Clone the Repository
+### Clone the Repository
 ```bash
 git clone https://github.com/your-username/Blog-Web-Application.git
 cd Blog-Web-Application
